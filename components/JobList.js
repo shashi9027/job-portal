@@ -37,13 +37,17 @@ export default function JobList({ jobs, getJobs }) {
                 setFilters({ ...filters, [filtername]: value })
                 
             }
-            if (value == "oldest") {
+            else if (value == "oldest") {
                 const sortedByOldest = jobsList.slice().sort((a, b) => {
                     return new Date(a.timestamp) - new Date(b.timestamp);
                 });
                 setJobsList(sortedByOldest)
                 setFilters({ ...filters, [filtername]: value })
                 
+            }
+            else{
+                getJobs(pages)
+                setFilters({ ...filters, [filtername]: value })
             }
         }
 
