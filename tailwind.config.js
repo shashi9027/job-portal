@@ -16,7 +16,11 @@ module.exports = {
         "primary": "#1967d2",
         "secondary": "#e2eaf8",
         "black": "#202124",
-        "background": "#f5f7fc"
+        "background": "#f5f7fc",
+        "background-green": "rgba(52,168,83,.15)",
+        "green": "#34a853",
+        "background-orange": "rgba(249,171,0,.15)",
+        "orange": "#f9ab00",
       },
     },
   },

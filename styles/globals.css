@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Jost';
-  src:  url('/fonts/Jost-VariableFont_wght.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
+@import 'fonts.css';
+
+body {
+  font-family: 'Jost', sans-serif;
+}
 
 :root {
-   --primary: #1967d2;
-   --secondary:  #e2eaf8;
+  --primary: #1967d2;
+  --secondary: #e2eaf8;
 }
+
 /*
 @media (prefers-color-scheme: dark) {
   :root {
@@ -39,58 +39,253 @@ body {
   }
 } */
 
-.tab-list{
-    line-height: 30px;
-    font-weight: 400;
-    color: #202124;
-    cursor: pointer;
+.tab-list {
+  line-height: 30px;
+  font-weight: 400;
+  color: #202124;
+  cursor: pointer;
 }
-.btn{
-    min-width: 100px;
-    padding: 8px 20px;
-    font-size: 14px;
-    border-radius: 8px;
+
+.btn {
+  min-width: 100px;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 8px;
 }
-.page-title{
+
+.page-title {
   padding: 50px 0 40px;
 }
-.filters-heading{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    color: #202124;
-    margin-bottom: 16px;
+
+.filters-heading {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #202124;
+  margin-bottom: 16px;
 }
-input{
-    outline: none;
-    width: 100%;
-    height: 60px;
-    padding: 14px 20px 14px 54px;
-    line-height: 30px;
-    font-size: 15px;
-    color: dimgray;
-    background-color: #fff;
-    box-shadow: none;
-    border: 1px solid #ecedf2;
-    border-radius: 8px;
-    transition: all .3s ease;
+
+input {
+  outline: none;
+  width: 100%;
+  height: 60px;
+  padding: 14px 20px 14px 54px;
+  line-height: 30px;
+  font-size: 15px;
+  color: dimgray;
+  background-color: #fff;
+  box-shadow: none;
+  border: 1px solid #ecedf2;
+  border-radius: 8px;
+  transition: all .3s ease;
 }
-input::placeholder{
+
+input::placeholder {
   color: black
 }
-input:focus{
+
+input:focus {
   border-color: var(--primary);
 }
-.icon{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    margin-top: -6px;
-    font-size: 16px;
-    line-height: 30px;
+
+
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -6px;
+  font-size: 16px;
+  line-height: 30px;
 }
 
+.text {
+  font-size: 15px;
+  color: dimgray;
+  line-height: 24px;
+  font-weight: 400;
+}
 
+.selector {
+  position: relative;
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: dimgray;
+  line-height: 25px;
+  background-color: #f0f5f7;
+  min-width: 146px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px
+}
 
+select {
+  outline: none;
+}
 
+.job-card {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 32px 20px 22px 30px;
+  background: #fff;
+  border: 1px solid #ecedf2;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all .3s ease;
+}
 
+.job-info {
+  position: relative;
+  font-size: 14px;
+  line-height: 22px;
+  color: dimgray;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.job-other-info div {
+  font-size: 13px;
+  line-height: 15px;
+  margin-right: 15px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  margin-bottom: 10px
+}
+
+.label {
+  font-size: 15px;
+  line-height: 20px;
+  color: #202124;
+  font-weight: 500;
+  margin-bottom: 10px
+}
+
+.login {
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  background-color: var(--primary);
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 8px;
+  font-weight: 400;
+  padding: 18px 35px 15px;
+}
+
+.divider {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  color: dimgray;
+  background: #fff;
+  margin: 10px 0 25px;
+}
+
+.divider:before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 1px;
+  width: 100%;
+  background: #ecedf2;
+  border-radius: 8px;
+  content: "";
+}
+
+.divider:after {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 20px;
+  width: 60px;
+  background: #fff;
+  margin-left: -30px;
+  content: "";
+}
+
+.social-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  color: inherit;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: inherit;
+  border: 1px solid #fff;
+  font-weight: 500;
+  padding: 10px 30px;
+  color: var(--primary);
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.closed {
+  position: absolute;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  background: #f0f5f7;
+  border-radius: 8px;
+  color: #f0f5f7;
+  text-indent: 0;
+  font-size: 0;
+  z-index: 5;
+  width: 40px
+}
+
+.clear-btn {
+  height: 45px;
+  padding: 13px 15px;
+  background-color: #dc3545;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 30px;
+  color: dimgray;
+  font-weight: 400;
+}
+
+.footer-bottom {
+  position: relative;
+  width: 100%;
+  padding: 36px 20px;
+  text-align: center;
+  border-top: 1px solid #ecedf2;
+  min-height: 100px
+}
+
+.social-logo img{
+  max-width: 15px;
+  max-height: 15px; 
+}
+
+.call-to-action{
+  position: relative;
+    background-color: rgba(25,103,210,.07);
+    padding: 30px 140px 30px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.call-to-action p{
+  font-size: 14px;
+    line-height: 24px;
+    color: dimgray;
+    margin-bottom: 25px;
+}
+
+.call-to-action .image{
+  position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 140px;
+    background-image: url("/ads-bg-4.png");
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: cover;
+    
+}
